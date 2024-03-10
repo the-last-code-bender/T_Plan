@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,12 +14,147 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>TPlan</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resource.qrc">
+    <normaloff>:/icons/resource/icons/check.png</normaloff>:/icons/resource/icons/check.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget"/>
-  <widget class="QMenuBar" name="menubar"/>
-  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionNew"/>
+    <addaction name="actionOpen"/>
+    <addaction name="actionTransfer"/>
+    <addaction name="actionSettings"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="actionAdd"/>
+    <addaction name="actionFilter"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::PreventContextMenu</enum>
+   </property>
+   <property name="acceptDrops">
+    <bool>false</bool>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <property name="floatable">
+    <bool>true</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionNew"/>
+   <addaction name="actionOpen"/>
+   <addaction name="actionTransfer"/>
+   <addaction name="separator"/>
+   <addaction name="actionAdd"/>
+   <addaction name="actionFilter"/>
+   <addaction name="separator"/>
+   <addaction name="actionSettings"/>
+  </widget>
+  <action name="actionNew">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/icons/resource/icons/new-file.png</normaloff>:/icons/resource/icons/new-file.png</iconset>
+   </property>
+   <property name="text">
+    <string>New</string>
+   </property>
+   <property name="toolTip">
+    <string>New File</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/icons/resource/icons/open-file.png</normaloff>:/icons/resource/icons/open-file.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open</string>
+   </property>
+   <property name="toolTip">
+    <string>Open File</string>
+   </property>
+  </action>
+  <action name="actionTransfer">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/icons/resource/icons/data-transfer.png</normaloff>:/icons/resource/icons/data-transfer.png</iconset>
+   </property>
+   <property name="text">
+    <string>Transfer</string>
+   </property>
+   <property name="toolTip">
+    <string>Transfer Finished Jobs</string>
+   </property>
+  </action>
+  <action name="actionAdd">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/icons/resource/icons/add.png</normaloff>:/icons/resource/icons/add.png</iconset>
+   </property>
+   <property name="text">
+    <string>Add</string>
+   </property>
+   <property name="toolTip">
+    <string>Add ToDo</string>
+   </property>
+  </action>
+  <action name="actionFilter">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/icons/resource/icons/filter.png</normaloff>:/icons/resource/icons/filter.png</iconset>
+   </property>
+   <property name="text">
+    <string>Filter</string>
+   </property>
+   <property name="toolTip">
+    <string>Filter ToDo</string>
+   </property>
+  </action>
+  <action name="actionSettings">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/icons/resource/icons/setting.png</normaloff>:/icons/resource/icons/setting.png</iconset>
+   </property>
+   <property name="text">
+    <string>Settings</string>
+   </property>
+  </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
  <connections/>
 </ui>

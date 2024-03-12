@@ -27,9 +27,12 @@ private slots:
 
     void on_actionAdd_triggered();
 
+    void on_actionCalender_triggered();
+
     void on_actionFilter_triggered();
 
 private:
     Ui::MainWindow *ui;
+    int page_state, filter_state;
 };
 #endif // MAINWINDOW_H

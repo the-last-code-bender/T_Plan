@@ -7,5 +7,6 @@
         <file>resource/icons/open-file.png</file>
         <file>resource/icons/filter.png</file>
         <file>resource/icons/setting.png</file>
+        <file>resource/icons/calendar.png</file>
     </qresource>
 </RCC>
